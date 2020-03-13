@@ -20,7 +20,8 @@ exports.store_create = async (req, res) => {
 }
 
 exports.store_get = async (req, res) => {
-    const stores = await Store.find()
+    const { sortBy, search, limit, offset, descending } = req.query
+    const stores = await Store.find({ name: {$regex : search || ''} })
     return res.json(stores);
 }
 
