@@ -39,3 +39,16 @@ exports.product_get = async (req, res) => {
     const products = await Product.find()
     return res.json(products)
 }
+
+exports.product_delete = async (req, res, next) => {
+    try {
+        const _id = req.params.productId
+        const product = await Product.deleteOne({_id})
+        return res.json(product)
+    }
+    catch {
+        return res.status(400).json({
+            message: 'product format is invalid'
+        });
+    }
+}

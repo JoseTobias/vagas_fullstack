@@ -1,5 +1,5 @@
 const Store = require('../models/Loja');
-
+const Product = require('../models/Produto');
 
 exports.store_create = async (req, res) => {
     const { name, logo, link } = req.body
@@ -49,6 +49,7 @@ exports.store_delete = async (req, res, next) => {
     try {
         const _id = req.params.storeId
         const stores = await Store.deleteOne({_id})
+        const product = await Product.deleteMany({storeid: _id})
         return res.json(stores)
     }
     catch {
