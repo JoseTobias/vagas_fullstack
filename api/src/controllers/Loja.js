@@ -2,13 +2,13 @@ const Store = require('../models/Loja');
 
 
 exports.store_create = async (req, res) => {
-    const { name, logo, link } = req.body;
+    const { name, logo, link } = req.body
 
 
-    const storeExists = await Store.findOne({ user: name });
+    const storeExists = await Store.findOne({ user: name })
 
     if(storeExists) {
-        return res.json(storeExists);
+        return res.json(storeExists)
     }
 
     const store = await Store.create({
@@ -16,7 +16,7 @@ exports.store_create = async (req, res) => {
         logo,
         link
     })
-    return res.json(store);
+    return res.json(store)
 }
 
 exports.store_get = async (req, res) => {
@@ -24,7 +24,7 @@ exports.store_get = async (req, res) => {
     const stores = await Store.find({ name: {$regex : search || ''} },
     {},
     { sort: { [sortBy]: 1 }, limit: parseInt(limit), skip: parseInt(offset)})
-    return res.json(stores);
+    return res.json(stores)
 }
 
 exports.store_update = async (req, res, next) => {
