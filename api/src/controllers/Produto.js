@@ -40,6 +40,26 @@ exports.product_get = async (req, res) => {
     return res.json(products)
 }
 
+exports.product_update = async (req, res, next) => {
+    try {
+        const _id = req.params.productId
+        const { price, title, image, link, percentage } = req.body
+        const product = await Product.updateOne({_id}, {
+            price,
+            title,
+            image,
+            link,
+            percentage
+        })
+        return res.json(product)
+    }
+    catch {
+        return res.status(400).json({
+            message: 'product format is invalid'
+        });
+    }
+}
+
 exports.product_delete = async (req, res, next) => {
     try {
         const _id = req.params.productId
