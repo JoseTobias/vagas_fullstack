@@ -28,18 +28,32 @@ exports.store_get = async (req, res) => {
 }
 
 exports.store_update = async (req, res, next) => {
-    const _id = req.params.storeId
-    const { name, logo, link } = req.body
-    const store = await Store.updateOne({_id}, {
-        name,
-        logo,
-        link
-    })
-    return res.json(store)
+    try {
+        const _id = req.params.storeId
+        const { name, logo, link } = req.body
+        const store = await Store.updateOne({_id}, {
+            name,
+            logo,
+            link
+        })
+        return res.json(store)
+    }
+    catch {
+        return res.status(400).json({
+            message: 'storeid format is invalid'
+        });
+    }
 }
 
 exports.store_delete = async (req, res, next) => {
-    const _id = req.params.storeId
-    const stores = await Store.deleteOne({_id})
-    return res.json(stores)
+    try {
+        const _id = req.params.storeId
+        const stores = await Store.deleteOne({_id})
+        return res.json(stores)
+    }
+    catch {
+        return res.status(400).json({
+            message: 'storeid format is invalid'
+        });
+    }
 }
