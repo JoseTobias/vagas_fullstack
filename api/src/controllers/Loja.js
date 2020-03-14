@@ -20,7 +20,8 @@ exports.store_create = async (req, res) => {
 }
 
 exports.store_get = async (req, res) => {
-    const { sortBy, search, limit, offset, descending } = req.query
+    const { sortBy, search, offset } = req.query
+    const limit = (req.query.limit >= 30 ? 30 : req.query.limit)
     const stores = await Store.find({ name: {$regex : search || ''} },
     {},
     { sort: { [sortBy]: 1 }, limit: parseInt(limit), skip: parseInt(offset)})

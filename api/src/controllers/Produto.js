@@ -36,7 +36,11 @@ exports.product_create = async (req, res) => {
 }
 
 exports.product_get = async (req, res) => {
-    const products = await Product.find()
+    const { sortBy, search, offset } = req.query
+    const limit = (req.query.limit >= 30 ? 30 : req.query.limit)
+    const products = await Product.find({ title: {$regex : search || ''} },
+    {},
+    { sort: { [sortBy]: 1 }, limit: parseInt(limit), skip: parseInt(offset)})
     return res.json(products)
 }
 
