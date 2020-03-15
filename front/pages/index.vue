@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <page-header />
     <page-footer />
   </div>

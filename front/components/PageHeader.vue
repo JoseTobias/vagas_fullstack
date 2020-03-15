@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
     <img src="/group-12.png" alt="Logo do site">
     <div class="conta a-3">
       <img src="user.png" alt="Ícone de usuário">
@@ -35,7 +35,8 @@
 }
 
 header {
-  margin: 20px 0 80px 0px;
+  margin-top: 20px;
+  margin-bottom: 80px;
   display: flex;
   align-items: center;
 }

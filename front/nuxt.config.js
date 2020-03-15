@@ -24,7 +24,8 @@ export default {
   */
   css: [
     'bulma/css/bulma.css',
-    '~/assets/colors.css'
+    '~/assets/colors.css',
+    '~/assets/main.css'
   ],
   /*
   ** Plugins to load before mounting the App

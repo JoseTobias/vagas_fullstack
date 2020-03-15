@@ -1,19 +1,21 @@
 <template>
   <div class="primary a-3">
-    <div class="chrome">
-      <img src="/chrome.png" alt="Ícone do chrome">
-      <div>
-        <p><b>Instale a extensão no seu Google Chrome</b></p>
-        <p>Texto de suporte de título</p>
+    <div class="container">
+      <div class="chrome">
+        <img src="/chrome.png" alt="Ícone do chrome">
+        <div>
+          <p><b>Instale a extensão no seu Google Chrome</b></p>
+          <p>Texto de suporte de título</p>
+        </div>
       </div>
-    </div>
-    <div class="download">
-      <div class="text">
-        <p><b>Baixe nosso app</b> e não fique de fora do que acontece no produto</p>
-      </div>
-      <div class="imgs">
-        <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Story">
-        <img src="/google-play.png" alt="Imagem do Google Story">
+      <div class="download">
+        <div class="text">
+          <p><b>Baixe nosso app</b> e não fique de fora do que acontece no produto</p>
+        </div>
+        <div class="imgs">
+          <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Story">
+          <img src="/google-play.png" alt="Imagem do Google Story">
+        </div>
       </div>
     </div>
   </div>
@@ -22,8 +24,11 @@
 <style scoped>
 .primary {
   background-color: #a5d207;
-  display: flex;
   padding: 20px 0;
+}
+
+.container {
+  display: flex;
 }
 
 .chrome {
@@ -51,7 +56,7 @@
 }
 
 @media (max-width: 992px) {
-  .primary {
+  .container {
     flex-direction: column;
   }
   .chrome {
@@ -73,6 +78,7 @@
   }
   .text {
     max-width: initial;
+    margin-bottom: 20px;
   }
 }
 </style>
