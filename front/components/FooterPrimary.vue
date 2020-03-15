@@ -90,6 +90,7 @@ a:hover {
   }
   .text {
     max-width: initial;
+    margin-right: 0px;
     margin-bottom: 20px;
   }
 }

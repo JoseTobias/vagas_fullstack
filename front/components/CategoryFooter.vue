@@ -2,7 +2,7 @@
   <div>
     <h2>{{ title }}</h2>
     <template v-for="(item, index) in texts">
-      <nuxt-link :to="'/' + item" :key="index">
+      <nuxt-link :key="index" :to="'/' + item">
         {{ item }}
       </nuxt-link>
     </template>
