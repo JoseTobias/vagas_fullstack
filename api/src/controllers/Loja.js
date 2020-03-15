@@ -5,7 +5,7 @@ exports.store_create = async (req, res) => {
     const { name, logo, link } = req.body
 
 
-    const storeExists = await Store.findOne({ user: name })
+    const storeExists = await Store.findOne({ name })
 
     if(storeExists) {
         return res.json(storeExists)
@@ -26,6 +26,19 @@ exports.store_get = async (req, res) => {
     {},
     { sort: { [sortBy]: 1 }, limit: parseInt(limit), skip: parseInt(offset)})
     return res.json(stores)
+}
+
+exports.store_get_one = async (req, res) => {
+    try {
+        const _id = req.params.storeId
+        const store = await Store.findOne({_id})
+        return res.json(store)
+    }
+    catch {
+        return res.status(400).json({
+            message: 'storeid format is invalid'
+        });
+    }
 }
 
 exports.store_update = async (req, res, next) => {
