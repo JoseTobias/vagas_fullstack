@@ -10,12 +10,10 @@
         <nuxt-link to="/Baixar no google play">
           <img src="/google-play.png" alt="Imagem do Google Story">
         </nuxt-link>
-        </div>
+      </div>
     </div>
     <div class="right">
-      <nuxt-link to="/Baixar no app store">
-        <img src="/group-9.png" alt="Imagem de dois celulares">
-      </nuxt-link>
+      <img src="/group-9.png" alt="Imagem de dois celulares">
     </div>
   </div>
 </template>
@@ -40,6 +38,10 @@
 
 h1 {
   margin-bottom: 20px;
+}
+
+a:hover {
+  opacity: 0.88;
 }
 
 p {
