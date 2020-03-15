@@ -8,10 +8,18 @@
         <div class="container-redes">
           <h2>Redes Sociais</h2>
           <div class="redes-socias">
-            <img src="/path.png" alt="Ícone facebook">
-            <img src="/path_2.png" alt="Ícone twiter">
-            <img src="/combined-shape.png" alt="Ícone instagram">
-            <img src="/shape.png" alt="Ícone youtube">
+            <a href="https://facebook.com" target="_blank">
+              <img src="/path.png" alt="Ícone facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="/path_2.png" alt="Ícone twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="/combined-shape.png" alt="Ícone instagram">
+            </a>
+            <a href="https://https://youtube.com" target="_blank">
+              <img src="/shape.png" alt="Ícone youtube">
+            </a>
           </div>
         </div>
       </div>
@@ -22,45 +30,6 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.secondary {
-  background-color: #415400;
-  padding: 20px 0;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.container-redes {
-  display: flex;
-  flex-direction: column;
-}
-
-.redes-socias {
-  margin: auto
-}
-
-.redes-socias img {
-  margin-right: 20px;
-}
-
-@media (max-width: 767px) {
-  .footer-top {
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-  h2 {
-    margin-bottom: 15px;
-  }
-  .redes-socias {
-    margin: 0;
-  }
-}
-</style>
 
 <script>
 import Category from './CategoryFooter.vue'
@@ -100,3 +69,50 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.secondary {
+  background-color: #415400;
+  padding: 20px 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.container-redes {
+  display: flex;
+  flex-direction: column;
+}
+
+.redes-socias {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.redes-socias img {
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  .redes-socias {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .secondary {
+    padding-left: 10px;
+  }
+}
+</style>

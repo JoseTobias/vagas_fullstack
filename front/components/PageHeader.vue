@@ -1,18 +1,20 @@
 <template>
   <div>
     <header class="container">
-      <img src="/group-12.png" alt="Logo do site">
+      <nuxt-link to="/">
+        <img src="/group-12.png" alt="Logo do site">
+      </nuxt-link>
       <div class="conta a-3">
         <img src="user.png" alt="Ícone de usuário">
-        <p>
+        <nuxt-link to="/Entrar">
           Entrar
-        </p>
+        </nuxt-link>
         <p class="barra">
           |
         </p>
-        <p>
+        <nuxt-link to="/Criar Conta">
           Criar conta
-        </p>
+        </nuxt-link>
       </div>
     </header>
   </div>
@@ -24,11 +26,16 @@
   display: flex;
 }
 
-.conta p {
+.conta a {
   margin: 0 15px;
+  color: inherit;
 }
 
-.conta p:last-child {
+.conta a:hover {
+  opacity: 0.8;
+}
+
+.conta a:last-child {
   margin: 0 0 0 15px;
 }
 
@@ -44,7 +51,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .container img {
+  .container a {
     margin: auto;
   }
 
@@ -52,7 +59,7 @@ header {
     margin-left: 0;
   }
 
-  .conta p {
+  .conta a, .conta p {
     display: none;
   }
 }

@@ -2,7 +2,9 @@
   <div class="primary a-3">
     <div class="container">
       <div class="chrome">
-        <img src="/chrome.png" alt="Ícone do chrome">
+        <nuxt-link to="/Baixar no chrome">
+          <img src="/chrome.png" alt="Ícone do chrome">
+        </nuxt-link>
         <div>
           <p><b>Instale a extensão no seu Google Chrome</b></p>
           <p>Texto de suporte de título</p>
@@ -13,8 +15,12 @@
           <p><b>Baixe nosso app</b> e não fique de fora do que acontece no produto</p>
         </div>
         <div class="imgs">
-          <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Story">
-          <img src="/google-play.png" alt="Imagem do Google Story">
+          <nuxt-link to="/Baixar no app store">
+            <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Store">
+          </nuxt-link>
+          <nuxt-link to="/Baixar no google play">
+            <img src="/google-play.png" alt="Imagem do Google Story">
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -29,6 +35,10 @@
 
 .container {
   display: flex;
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 .chrome {
@@ -52,7 +62,8 @@
 }
 
 .text {
-  max-width: 200px;
+  max-width: 250px;
+  margin-right: 10px;
 }
 
 @media (max-width: 992px) {

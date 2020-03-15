@@ -2,9 +2,9 @@
   <div>
     <h2>{{ title }}</h2>
     <template v-for="(item, index) in texts">
-      <p :key="index">
+      <nuxt-link :to="'/' + item" :key="index">
         {{ item }}
-      </p>
+      </nuxt-link>
     </template>
   </div>
 </template>
@@ -14,12 +14,18 @@ h2 {
   margin-bottom: 15px;
 }
 
-p {
+a {
+  display: block;
+  color: inherit;
   margin-bottom: 10px;
 }
 
+a:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 767px) {
-  p:last-child {
+  a:last-child {
     margin-bottom: 20px;
   }
 }
