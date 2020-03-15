@@ -9,6 +9,9 @@
 </template>
 
 <style scoped>
+.card {
+  max-width: 400px;
+}
 .card a {
   display: flex;
   flex-direction: column;

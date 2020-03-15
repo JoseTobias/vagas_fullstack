@@ -39,9 +39,23 @@ export default {
   display: flex;
   margin: auto;
   width: fit-content;
+  margin-top: 80px;
 }
 
 .card:not(:last-child) {
   margin-right: 20px;
+}
+
+@media (max-width: 991px) {
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card:not(:last-child) {
+    margin-right: 0px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
 }
 </style>
