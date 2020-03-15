@@ -70,6 +70,7 @@
   .download .imgs {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
   }
@@ -79,6 +80,18 @@
   .text {
     max-width: initial;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .primary {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 388px) {
+  .download .imgs img:first-child {
+    margin-bottom: 15px;
   }
 }
 </style>

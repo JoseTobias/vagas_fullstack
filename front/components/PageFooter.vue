@@ -1,8 +1,10 @@
 <template>
-  <footer>
-    <primary />
-    <secondary />
-  </footer>
+  <div>
+    <footer>
+      <primary />
+      <secondary />
+    </footer>
+  </div>
 </template>
 
 <style>

@@ -1,19 +1,21 @@
 <template>
-  <header class="container">
-    <img src="/group-12.png" alt="Logo do site">
-    <div class="conta a-3">
-      <img src="user.png" alt="Ícone de usuário">
-      <p>
-        Entrar
-      </p>
-      <p class="barra">
-        |
-      </p>
-      <p>
-        Criar conta
-      </p>
-    </div>
-  </header>
+  <div>
+    <header class="container">
+      <img src="/group-12.png" alt="Logo do site">
+      <div class="conta a-3">
+        <img src="user.png" alt="Ícone de usuário">
+        <p>
+          Entrar
+        </p>
+        <p class="barra">
+          |
+        </p>
+        <p>
+          Criar conta
+        </p>
+      </div>
+    </header>
+  </div>
 </template>
 
 <style scoped>
