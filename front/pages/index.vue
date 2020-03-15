@@ -1,15 +1,18 @@
 <template>
   <div class="container">
     <page-header />
+    <page-footer />
   </div>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader.vue'
+import PageFooter from '~/components/PageFooter.vue'
 
 export default {
   components: {
-    PageHeader
+    PageHeader,
+    PageFooter
   }
 }
 </script>
