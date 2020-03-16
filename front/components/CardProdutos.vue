@@ -5,7 +5,7 @@
       <h2>{{ Dado.title }}</h2>
       <p>Vendido por <a :href="Dado.LojaLink" class="a-85" target="_blank"><b> {{ Dado.LojaNome }}</b></a></p>
       <h1 class="a-86">R$ {{ Dado.Price }}</h1>
-      <div class="badge">
+      <div :class="'badge ' + color">
         <img v-if="Dado.Porcentagem >= 0" src="/triangle-copy_2.png">
         <img v-else src="/triangle-copy.png">
         <span> $ {{Dado.Porcentagem}}</span>
@@ -28,6 +28,21 @@ export default {
         img: 'https://static.carrefour.com.br/medias/sys_master/images/images/hdc/hd5/h00/h00/12373888204830.jpg'
       }
     }
+  },
+  computed: {
+    color () {
+      if (this.Dado.Porcentagem <= 10) {
+        return 'bg-green'
+      } else if (this.Dado.Porcentagem <= 0) {
+        return 'bg-green-light'
+      } else if (this.Dado.Porcentagem <= 0) {
+        return 'bg-yellow'
+      } else if (this.Dado.Porcentagem <= 0) {
+        return 'bg-orange'
+      } else {
+        return 'bg-red'
+      }
+    }
   }
 }
 </script>
@@ -41,6 +56,27 @@ export default {
   border: solid 1px #ababab;
   border-radius: 10px;
   color: inherit;
+  max-width: 80%;
+}
+
+.bg-green {
+  background-color: #1B5E20;
+}
+
+.bg-green-light {
+  background-color: #00C853;
+}
+
+.bg-yellow {
+  background-color: #FFC107;
+}
+
+.bg-orange {
+  background-color: #FF9800;
+}
+
+.bg-red {
+  background-color: #DD2C00;
 }
 
 h2 {
@@ -52,7 +88,6 @@ p {
 }
 
 .badge {
-  background-color: #000;
   position: absolute;
   left: 0;
   padding: 10px 15px 10px 10px;
