@@ -3,6 +3,7 @@
     <page-title />
     <container-cards />
     <Video />
+    <marcas />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import PageTitle from '~/components/PageTitle.vue'
 import ContainerCards from '~/components/ContainerCards.vue'
 import Video from '~/components/Video.vue'
+import Marcas from '~/components/Marcas.vue'
 
 export default {
   components: {
     PageTitle,
     ContainerCards,
-    Video
+    Video,
+    Marcas
   }
 }
 

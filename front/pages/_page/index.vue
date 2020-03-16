@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Page {{ this.$route.params.page }}</h1>
+    <h1>Pagina de {{ this.$route.params.page }}</h1>
   </div>
 </template>
 

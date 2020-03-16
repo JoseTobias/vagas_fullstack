@@ -25,7 +25,9 @@
       </div>
       <div>
         Lojas: Adidas, Americanas, Apple, Azul, Baby Store, Beleza na Web, Camisaria Colombo, Carrefour, Casas Bahia, Centauro, Cipela, Cissa Magaziine, Dafiti, Decathlon, Dell, efácil, Época, Cosméticos, Extra, Fast Shop Fnac, Girafa, Insinuante, Kabun, Kanui, Lenovo, Livraria Saraiva, Magazie Luiza, Marisa, MegaMamute, Mobly, Netshoes, Nike, Ponto Frio.
-        <b>Se sua marca não está listada entre em contato com a nossa equipe</b>
+        <nuxt-link to="/Contato">
+          <b>Se sua marca não está listada entre em contato com a nossa equipe</b>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -61,7 +63,7 @@ export default {
         title: 'Contato',
         texts: [
           'Fale Conosco',
-          'Midia Kit / Parceria',
+          'Midia Kit | Parceria',
           'Dúvidas Frequentes'
         ]
       }]
@@ -98,6 +100,14 @@ export default {
 }
 
 .redes-socias a:hover {
+  opacity: 0.8;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
   opacity: 0.8;
 }
 

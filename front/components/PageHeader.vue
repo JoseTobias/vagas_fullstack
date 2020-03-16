@@ -2,7 +2,7 @@
   <div>
     <header class="container">
       <nuxt-link to="/">
-        <img src="/group-12.png" alt="Logo do site">
+        <img src="/group-12.png" alt="Logo do site" title="Ir para a página inicial">
       </nuxt-link>
       <div class="conta a-3">
         <img src="user.png" alt="Ícone de usuário">
