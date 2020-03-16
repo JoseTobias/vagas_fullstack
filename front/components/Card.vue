@@ -18,6 +18,7 @@
   align-items: center;
   padding: 40px;
   box-shadow: inset 0 0 1rem rgba(0,0,0,.06);
+  border-radius: 10px;
   color: inherit;
 }
 

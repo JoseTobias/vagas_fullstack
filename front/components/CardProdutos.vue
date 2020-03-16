@@ -1,0 +1,62 @@
+<template>
+  <div class="card" target="_blank">
+    <a :href="Dado.ProdutoLink">
+      <img :src="Dado.img" :alt="Dado.title">
+      <h2>{{ Dado.title }}</h2>
+      <p>Vendido por <a :href="Dado.LojaLink" class="a-85" target="_blank"><b> {{ Dado.LojaNome }}</b></a></p>
+      <h1 class="a-86">R$ {{ Dado.Price }}</h1>
+      <div class="badge">
+        <img v-if="Dado.Porcentagem >= 0" src="/triangle-copy_2.png">
+        <img v-else src="/triangle-copy.png">
+        <span> $ {{Dado.Porcentagem}}</span>
+      </div>
+    </a>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      Dado: {
+        title: 'Produto',
+        ProdutoLink: 'https://github.com/JoseTobias/vagas_fullstack/blob/master/TESTE.md',
+        LojaNome: 'Shoptime',
+        LojaLink: 'https://www.shoptime.com.br/?opn=AFLSHOP&epar=afilio&afpid=59419',
+        Price: '2.109',
+        Porcentagem: '100',
+        img: 'https://static.carrefour.com.br/medias/sys_master/images/images/hdc/hd5/h00/h00/12373888204830.jpg'
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+.card > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: solid 1px #ababab;
+  border-radius: 10px;
+  color: inherit;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  padding: 10px 15px 10px 10px;
+  border-radius: 0px 5px 5px 0px;
+  color: #fff;
+}
+</style>
