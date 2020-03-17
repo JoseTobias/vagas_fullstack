@@ -6,6 +6,7 @@
     <marcas />
     <about-app />
     <card-produtos />
+    <slider />
   </div>
 </template>
 
@@ -15,14 +16,14 @@ import ContainerCards from '~/components/ContainerCards.vue'
 import Video from '~/components/Video.vue'
 import Marcas from '~/components/Marcas.vue'
 import AboutApp from '~/components/AboutApp.vue'
-import CardProdutos from '~/components/CardProdutos.vue'
+import Slider from '~/components/Slider.vue'
 
 export default {
   components: {
     PageTitle,
     ContainerCards,
     Video,
-    CardProdutos,
+    Slider,
     AboutApp,
     Marcas
   }

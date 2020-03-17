@@ -9,9 +9,6 @@
 </template>
 
 <style scoped>
-.card {
-  max-width: 400px;
-}
 .card a {
   display: flex;
   flex-direction: column;
@@ -28,6 +25,12 @@ a:hover {
 
 p {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 400px;
+  }
 }
 </style>
 

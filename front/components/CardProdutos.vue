@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  max-width: 100%;
+}
 .card > a {
   display: flex;
   flex-direction: column;
@@ -56,7 +59,6 @@ export default {
   border: solid 1px #ababab;
   border-radius: 10px;
   color: inherit;
-  max-width: 80%;
 }
 
 .bg-green {
