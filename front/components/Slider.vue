@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="container-slider">
     <no-ssr>
-      <h1>Produtos mais acessados</h1>
+      <div class="topo-slider">
+        <h1>Produtos mais acessados</h1>
+        <nuxt-link to="/produtos" class="a-83">
+          Ver todos
+        </nuxt-link>
+      </div>
       <swiper :options="swiperOption">
         <swiper-slide v-for="(card, index) in porodutosPopulares" :key="index">
           <card-produtos :dado="card" />
@@ -15,7 +20,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import CardProdutos from './CardProdutos.vue'
 import 'swiper/dist/css/swiper.css'
 export default {
@@ -48,12 +53,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('store', [
-      'produtos',
-      'porodutosPopulares'
-    ]),
     ...mapGetters({
-      produtos: 'getProdutos',
       porodutosPopulares: 'getProdutosPopulares'
     })
   }
@@ -61,10 +61,17 @@ export default {
 </script>
 
 <style>
+.container-slider {
+  margin-top: 80px;
+}
 .swiper-button {
   position: absolute;
   height: 100%;
   width: 20px;
+}
+
+.card a:hover {
+  background-color: #f8f8f8;
 }
 
 .swiper-button-next {
@@ -75,6 +82,16 @@ export default {
   .swiper-container {
     width: 90vw;
   }
+}
+
+.topo-slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.topo-slider a {
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {

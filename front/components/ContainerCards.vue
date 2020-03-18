@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container-cards {
   display: flex;
   margin: auto;

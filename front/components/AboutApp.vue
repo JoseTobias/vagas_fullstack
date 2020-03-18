@@ -7,12 +7,12 @@
       <h1>Título</h1>
       <p>Informação curta e direta sobre o app divilgado na página com foco nas funcionalidades</p>
       <div class="imgs">
-        <nuxt-link to="/Baixar no app store">
+        <a href="https://www.apple.com/br/ios/app-store/" target="_blank">
           <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Store">
-        </nuxt-link>
-        <nuxt-link to="/Baixar no google play">
+        </a>
+        <a href="https://play.google.com/store/?utm_source=latam_Med&utm_medium=hasem&utm_content=Feb0217&utm_campaign=Evergreen&pcampaignid=MKT-DR-latam-br-1002290-Med-hasem-py-Evergreen-Feb0217-Text-Institucional&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_Oq6FBqN2ROcKz-aLBQolHKTQlFIBXp7eQF1BYYD4IFh1sj_YFOzDxkaAmboEALw_wcB&gclsrc=aw.ds" target="_blank">
           <img src="/google-play.png" alt="Imagem do Google Story">
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </div>
@@ -20,8 +20,7 @@
 
 <style scoped>
 .title-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 80px;
   display: flex;
   align-items: center;
 }
@@ -71,6 +70,7 @@ p {
   }
   .imgs a:first-child {
     margin-right: 0px;
+    margin-bottom: 15px;
   }
 }
 </style>

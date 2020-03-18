@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <a :href="dado.link" target="_blank">
-      <div class="img" :style="'background-image: url( ' + dado.image + ');'"></div>
+      <div class="img" :style="'background-image: url( ' + dado.image + ');'" />
       <h2>{{ dado.title }}</h2>
       <p>Vendido por <a :href="Loja.link" class="a-85" target="_blank"><b> {{ Loja.name }}</b></a></p>
       <h1 class="a-86">R$ {{ dado.price }}</h1>
@@ -29,29 +29,27 @@ export default {
   },
   computed: {
     color () {
-      if (this.dado.percentage <= 0) {
+      if (this.dado.percentage <= -10) {
+        return 'bg-green'
+      } else if (this.dado.percentage <= 0) {
         return 'bg-green-light'
       } else if (this.dado.percentage > 5) {
         return 'bg-orange'
-      } else if (this.dado.percentage <= 10) {
-        return 'bg-green'
-      } else if (this.dado.percentage > 0) {
-        return 'bg-yellow'
       } else if (this.dado.percentage > 10) {
         return 'bg-red'
       } else {
-        return 'bg-red'
+        return 'bg-yellow'
       }
     }
+  },
+  mounted () {
+    this.getLoja()
   },
   methods: {
     async getLoja () {
       const { data } = await this.$axios.get(`http://localhost:3030/stores/${this.dado.storeid}`)
       this.Loja = data
     }
-  },
-  mounted () {
-    this.getLoja()
   }
 }
 </script>
@@ -70,7 +68,7 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: solid 1px #ababab;
+  border: solid 2px #cdcdcd;
   border-radius: 10px;
   color: inherit;
   box-sizing: border-box;
@@ -81,6 +79,7 @@ export default {
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bg-green {

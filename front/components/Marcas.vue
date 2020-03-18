@@ -45,6 +45,7 @@ export default {
 <style scoped>
 .marcas {
   display: flex;
+  margin-top: 80px;
 }
 
 .left {
@@ -100,6 +101,10 @@ export default {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+  }
+
+  .text:first-child {
+    margin-top: 40px;
   }
 
   .text p {

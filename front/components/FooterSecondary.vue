@@ -17,7 +17,7 @@
             <a href="https://www.instagram.com" target="_blank">
               <img src="/combined-shape.png" alt="Ícone instagram">
             </a>
-            <a href="https://https://youtube.com" target="_blank">
+            <a href="https://youtube.com" target="_blank">
               <img src="/shape.png" alt="Ícone youtube">
             </a>
           </div>

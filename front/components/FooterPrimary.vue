@@ -2,9 +2,9 @@
   <div class="primary a-3">
     <div class="container">
       <div class="chrome">
-        <nuxt-link to="/Baixar no chrome">
+        <a href="https://chrome.google.com/webstore/category/extensions" target="_blank">
           <img src="/chrome.png" alt="Ícone do chrome">
-        </nuxt-link>
+        </a>
         <div>
           <p><b>Instale a extensão no seu Google Chrome</b></p>
           <p>Texto de suporte de título</p>
@@ -15,12 +15,12 @@
           <p><b>Baixe nosso app</b> e não fique de fora do que acontece no produto</p>
         </div>
         <div class="imgs">
-          <nuxt-link to="/Baixar no app store">
+          <a href="https://www.apple.com/br/ios/app-store/" target="_blank">
             <img src="/download-on-the-app-store-badge-ptbr-rgb-blk-092917.png" alt="Imagem do App Store">
-          </nuxt-link>
-          <nuxt-link to="/Baixar no google play">
+          </a>
+          <a href="https://play.google.com/store/?utm_source=latam_Med&utm_medium=hasem&utm_content=Feb0217&utm_campaign=Evergreen&pcampaignid=MKT-DR-latam-br-1002290-Med-hasem-py-Evergreen-Feb0217-Text-Institucional&gclid=Cj0KCQjwjcfzBRCHARIsAO-1_Oq6FBqN2ROcKz-aLBQolHKTQlFIBXp7eQF1BYYD4IFh1sj_YFOzDxkaAmboEALw_wcB&gclsrc=aw.ds" target="_blank">
             <img src="/google-play.png" alt="Imagem do Google Story">
-          </nuxt-link>
+          </a>
         </div>
       </div>
     </div>

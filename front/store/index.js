@@ -26,6 +26,7 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit ({ dispatch }) {
     await dispatch('GET_PRODUTOS_POPULARES')
+    await dispatch('GET_PRODUTOS')
   },
   async GET_PRODUTOS_POPULARES ({ commit }) {
     const { data } = await this.$axios.get(URL + 'products?limit=10&sortBy=percentage')
