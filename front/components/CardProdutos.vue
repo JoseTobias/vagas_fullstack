@@ -1,40 +1,57 @@
 <template>
   <div class="card">
-      <a :href="Dado.link" target="_blank">
-        <div class="img" :style="'background-image: url( ' + Dado.image + ');'"></div>
-        <h2>{{ Dado.title }}</h2>
-        <p>Vendido por <a :href="Dado.LojaLink" class="a-85" target="_blank"><b> {{ Dado.LojaNome }}</b></a></p>
-        <h1 class="a-86">R$ {{ Dado.price }}</h1>
-        <div :class="'badge ' + color">
-          <img v-if="Dado.percentage > 0" src="/triangle-copy_2.png">
-          <img v-else src="/triangle-copy.png">
-          <span> $ {{ Dado.percentage }}</span>
-        </div>
-      </a>
+    <a :href="dado.link" target="_blank">
+      <div class="img" :style="'background-image: url( ' + dado.image + ');'"></div>
+      <h2>{{ dado.title }}</h2>
+      <p>Vendido por <a :href="Loja.link" class="a-85" target="_blank"><b> {{ Loja.name }}</b></a></p>
+      <h1 class="a-86">R$ {{ dado.price }}</h1>
+      <div :class="'badge ' + color">
+        <img v-if="dado.percentage > 0" src="/triangle-copy_2.png">
+        <img v-else src="/triangle-copy.png">
+        <span> $ {{ dado.percentage }}</span>
+      </div>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    Dado: {}
+    dado: {
+      type: Object,
+      required: true
+    }
+  },
+  data () {
+    return {
+      Loja: {}
+    }
   },
   computed: {
     color () {
-      if (this.Dado.percentage <= 0) {
+      if (this.dado.percentage <= 0) {
         return 'bg-green-light'
-      } else if (this.Dado.percentage > 5) {
+      } else if (this.dado.percentage > 5) {
         return 'bg-orange'
-      } else if (this.Dado.percentage <= 10) {
+      } else if (this.dado.percentage <= 10) {
         return 'bg-green'
-      } else if (this.Dado.percentage > 0) {
+      } else if (this.dado.percentage > 0) {
         return 'bg-yellow'
-      } else if (this.Dado.percentage > 10) {
+      } else if (this.dado.percentage > 10) {
         return 'bg-red'
       } else {
         return 'bg-red'
       }
     }
+  },
+  methods: {
+    async getLoja () {
+      const { data } = await this.$axios.get(`http://localhost:3030/stores/${this.dado.storeid}`)
+      this.Loja = data
+    }
+  },
+  mounted () {
+    this.getLoja()
   }
 }
 </script>

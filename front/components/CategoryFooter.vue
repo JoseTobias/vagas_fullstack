@@ -34,8 +34,14 @@ a:hover {
 <script>
 export default {
   props: {
-    title: String,
-    texts: Array
+    title: {
+      type: String,
+      requied: true
+    },
+    texts: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

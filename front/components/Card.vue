@@ -37,9 +37,18 @@ p {
 <script>
 export default {
   props: {
-    title: String,
-    description: String,
-    icon: String
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    icon: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

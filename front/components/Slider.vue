@@ -4,7 +4,7 @@
       <h1>Produtos mais acessados</h1>
       <swiper :options="swiperOption">
         <swiper-slide v-for="(card, index) in porodutosPopulares" :key="index">
-          <card-produtos :Dado="card"/>
+          <card-produtos :dado="card" />
         </swiper-slide>
         <div slot="button-next" class="swiper-button-next">
           <img src="seta.png">
