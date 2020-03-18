@@ -5,7 +5,6 @@
     <Video />
     <marcas />
     <about-app />
-    <card-produtos />
     <slider />
   </div>
 </template>
