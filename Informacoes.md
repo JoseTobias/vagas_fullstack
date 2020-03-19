@@ -1,3 +1,30 @@
+## Executar o projeto
+
+### API
+
+Coloque a senha para o banco de dados ou coloque outro no arquivo src/server.js.
+
+Entre no projeto e instale as dependências e em seguida execute o comando de produção.
+
+`npm install`
+
+`npm run production`
+
+Caso queira reiniciar a api:
+
+`npm run restart`
+
+## Front
+
+Entre no projeto e instale as dependências e em seguida execute o comando de de build e start:
+
+`npm install`
+
+`npm run build`
+
+`npm run start`
+
+
 ## Algumas informações de adições feitas no projeto
 
 ### API
