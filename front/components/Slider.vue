@@ -75,8 +75,9 @@ export default {
 }
 
 .swiper-button-next {
-  background-image: none;
-  width: auto;
+  background-image: none !important;
+  width: auto !important;
+  width: auto !important;
 }
 @media (max-width: 1400px) {
   .swiper-container {
